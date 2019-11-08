@@ -16,27 +16,29 @@ function App() {
     <div className="App">
       <Wrapper>
         <Controller>
-          <Scene triggerHook="onLeave" duration={3500} pin>
+          <Scene triggerHook="onLeave" duration={7000} pin>
             <Timeline
               target={
                 <div>Hell Yah</div>
               }
             >
-              <Tween from={{ x: '100px', rotation: -360 }} />
+              <Tween ease="Power3.easeOut" from={{ x: '100px', rotation: -360 }} />
               <Tween to={{ x: '50px', rotation: -90 }} />
               <Timeline
+                delay={-2}
                 target={
                   <div>Fuc ie</div>
                 }
               >
-                <Tween from={{ x: '200px', rotation: -60 }} />
+                <Tween ease="Power3.easeOut" from={{ x: '200px', rotation: -60 }} />
                 <Tween to={{ x: '70px', rotation: -40 }} />
                 <Timeline
+                  delay={-1}
                   target={
                     <div>Holly Molly</div>
                   }
                 >
-                  <Tween from={{ x: '140px', rotation: -100 }} />
+                  <Tween ease="Power3.easeOut" from={{ x: '140px', rotation: -100 }} />
                   <Tween to={{ x: '20px', rotation: -140 }} />
                 </Timeline>
               </Timeline>
